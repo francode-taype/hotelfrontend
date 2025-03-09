@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.table-striped tbody tr:nth-child(odd) {
+  @apply bg-secondary-300; /* Color de fondo para filas impares */
+}
+
+.table-striped tbody tr:nth-child(even) {
+  @apply bg-secondary-100; /* Color de fondo para filas pares */
+}
+
+/* INICIO-BOTONES*/
+  .btn-primary {
+    @apply bg-secondary-900 hover:bg-secondary-700 text-primary-100 font-semibold py-2 px-4 rounded-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-primary-300 hover:bg-primary-100 text-secondary-300 font-semibold py-2 px-4 rounded-lg ;
+  }
+  .btn-tertiary {
+    @apply bg-tertiary-300 hover:bg-tertiary-700 text-secondary-100 font-semibold py-2 px-4 rounded-lg ;
+  }
+  .btn-cancel{
+    @apply bg-gray-300 hover:bg-gray-400 text-primary-100 hover:text-gray-100 font-semibold py-2 px-4 rounded-lg ;
+  }
+  .btn-back{
+    @apply bg-gray-300 hover:bg-gray-400 text-primary-100 hover:text-gray-100 font-semibold py-2 px-4 rounded-lg ;
+  }
+/* FIN-BOTONES*/
+
+/* INICIO-ESTILOS-SIDEBAR*/
+
+  /* Estilo general para los elementos del menú */
+  .menu-item {
+      @apply flex items-center gap-2 py-2 px-2 text-secondary-500 text-lg rounded-lg transition-colors;
+    }
+    
+    /* Estilo para los menús desplegables */
+    .menu-dropdown {
+      @apply pl-6 pr-2;
+    }
+    
+    /* Estilo para los botones que abren submenús */
+    .menu-toggle {
+      @apply flex items-center justify-between gap-2 p-2 text-secondary-500 text-xl rounded-lg w-full;
+    }
+    
+    /* Estilo para el botón de apertura y cierre del sidebar */
+    .sidebar-toggle-button {
+      @apply xl:hidden fixed bottom-4 right-4 bg-primary-300 text-secondary-500 rounded-full z-50 transition-all duration-500;
+    }
+
+/* FIN-ESTILOS-SIDEBAR*/
+
