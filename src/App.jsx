@@ -16,6 +16,7 @@ import FloorRoomCreatePage from './pages/FloorRoom/FloorRoomCreatePage';
 import FloorRoomUpdatePage from './pages/FloorRoom/FloorRoomUpdatePage';
 import RoomPage from './pages/Room/RoomPage';
 import RoomCreatePage from './pages/Room/RoomCreatePage';
+import ListRoomPage from './pages/Reservation/ListRoomPage';
 
 // Context
 import { AuthProvider } from './context/AuthContext';
@@ -45,6 +46,8 @@ const App = () => {
             <Route path="habitaciones" element={<PrivateRoute component={RoomPage} />} />
             <Route path="habitaciones/crear" element={<PrivateRoute component={RoomCreatePage} />} />
             <Route path="*" element={<Navigate to="/" />} />
+            {/* reservaciones */}
+            <Route path="reservar" element={<PrivateRoute component={ListRoomPage} />} />
           </Route>
 
           <Route path="/" element={<AuthRoute />} /> 
